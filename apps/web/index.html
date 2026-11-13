@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <body>
+    <p>WEB-CORS</p>
+    <input id="api" placeholder="APIのURL" size="60">
+    <button id="go" type="button">APIを呼ぶ</button>
+    <pre id="out"></pre>
+    <script>
+      document.getElementById('go').onclick = async () => {
+        const url = document.getElementById('api').value.trim();
+        const out = document.getElementById('out');
+        try {
+          const res = await fetch(url);
+          out.textContent = await res.text();
+        } catch (error) {
+          out.textContent = String(error);
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "api",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "fastify": "5.3.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
